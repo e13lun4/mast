@@ -11,12 +11,12 @@ import ScrollToTop from "./ScrollToTop"
 
 const Navigation = () => {
   return (
-    <Router>
+    <Router basename="/mast">
       <ScrollToTop />
       <Header />
       <Routes>
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/mast" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/videos" element={<FeaturesPage />} />
       </Routes>
