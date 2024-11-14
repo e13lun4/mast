@@ -16,7 +16,7 @@ const Navigation = () => {
       <Header />
       <Routes>
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/" element={<MainPage />} />
+        <Route path="/mast" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/videos" element={<FeaturesPage />} />
       </Routes>
