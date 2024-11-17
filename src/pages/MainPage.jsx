@@ -63,14 +63,8 @@ const MainPage = () => {
                 backgroundAttachment: "fixed",
                 backgroundSize: "cover",
                 backgroundPosition: "center"
-                // borderRadius: 16,
-                // opacity: 0.4,
-                // marginLeft: 128,
-                // marginRight: 128,
-                // marginBottom: 64
               }}
               className="absolute inset-0 rounded-2xl opacity-40 border-solid border-black border-2"
-              // className="absolute inset-0"
             ></div>
             <p className="relative rounded-2xl p-6 sm:p-12 text-white max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl">
               GitOps — это современная методология, которая предлагает

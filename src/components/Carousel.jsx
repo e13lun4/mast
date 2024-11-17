@@ -27,9 +27,6 @@ const Carousel = ({ slides }) => {
       modules={[Pagination, Navigation]}
       onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
       onProgress={handleProgress}
-      // style={{ width: "800px", height: "400px", borderRadius: "18px" }}
-      // className="w-[800px] h-[400px] sm:w-[400px] lg:w-[800px] rounded-2xl"
-      // className="w-auto sm:w-[400px] lg:w-[800px] h-[400px] rounded-2xl"
       className="w-full max-w-screen-lg mx-auto rounded-2xl"
     >
       {slides.map((slide, index) => {
