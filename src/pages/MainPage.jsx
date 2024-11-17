@@ -41,37 +41,38 @@ const MainPage = () => {
   })
 
   return (
-    <div className="h-auto min-h-screen bg-gray pl-40 pr-40">
-      <section className="flex items-center text-center flex-col pt-16">
+    <div className="h-auto min-h-screen bg-gray">
+      <section className="flex items-center text-center flex-col pt-10 px-4 sm:px-8">
         <div>
-          <h1 className="text-5xl font-bold text-white animate-fadeIn2">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white animate-fadeIn2">
             Добро пожаловать в GitOps
           </h1>
         </div>
-        <div>
-          <p className="text-4xl mt-42 p-16 text-white animate-fadeIn2 pl-32 pr-32">
+        <div className="mt-10">
+          <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl p-4 sm:p-8 text-white animate-fadeIn2 max-w-4xl mx-auto">
             GitOps: Будущее DevOps — Автоматизация, Прозрачность и Надежность
             <br /> <br />
             Упростите управление вашей инфраструктурой, минимизируйте риски и
             ускорьте процесс разработки с помощью GitOps — инновационного
             подхода, который меняет правила игры в DevOps.
           </p>
-          <section className="text-2xl p-16 pt-0 text-white animate-fadeIn2 pl-32 pr-32 relative">
+          <section className="relative w-full my-10 px-4 sm:px-8 lg:px-16">
             <div
               style={{
                 backgroundImage: `url(${parallaxImage})`,
                 backgroundAttachment: "fixed",
                 backgroundSize: "cover",
-                backgroundPosition: "center",
-                borderRadius: 16,
-                opacity: 0.4,
-                marginLeft: 128,
-                marginRight: 128,
-                marginBottom: 64
+                backgroundPosition: "center"
+                // borderRadius: 16,
+                // opacity: 0.4,
+                // marginLeft: 128,
+                // marginRight: 128,
+                // marginBottom: 64
               }}
-              className="absolute inset-0"
+              className="absolute inset-0 rounded-2xl opacity-40 border-solid border-black border-2"
+              // className="absolute inset-0"
             ></div>
-            <p className="relative border-solid border-black border-2 rounded-2xl p-16">
+            <p className="relative rounded-2xl p-6 sm:p-12 text-white max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl">
               GitOps — это современная методология, которая предлагает
               уникальный и более эффективный способ управления инфраструктурой и
               приложениями. Этот подход основывается на использовании Git —
@@ -90,7 +91,7 @@ const MainPage = () => {
           </section>
         </div>
       </section>
-      <section className="flex items-center justify-center pb-0 pt-0">
+      <section className="flex items-center justify-center pb-0 pt-0 px-4 sm:px-8">
         <div
           ref={carouselRef}
           className={`w-full h-full z-0 transition-opacity duration-1000 ease-in-out delay-200 ${
@@ -100,19 +101,22 @@ const MainPage = () => {
           <Carousel slides={slides} />
         </div>
       </section>
-      <section className="flex items-center justify-center text-center flex-col pt-0 px-4 sm:px-8 md:px-16 lg:px-24">
+      <section className="flex items-center justify-center text-center flex-col pt-0 px-4 sm:px-8 md:px-12 lg:px-16">
         <div
           ref={textRef}
-          className={`text-2xl mt-42 p-16 text-white text-center transition-opacity duration-1000 ease-in-out delay-200 ${
+          className={`text-lg sm:text-xl md:text-2xl p-8 text-white transition-opacity duration-1000 ease-in-out delay-200 ${
             textInView ? "opacity-100" : "opacity-0"
-          }`}
+          } max-w-4xl`}
         >
           <p>
             GitOps для бизнеса: Быстрее, Надежнее, Эффективнее <br />
             Использование GitOps дает ряд очевидных преимуществ для любого
             бизнеса:
           </p>
-          <ul style={{ "list-style-type": "disc" }} className="text-left pl-32">
+          <ul
+            style={{ "list-style-type": "disc" }}
+            className="text-left pl-6 sm:pl-8 lg:pl-12 mt-6 space-y-2"
+          >
             <li>
               Ускорение времени развертывания до нескольких минут, что позволяет
               быстрее доставлять новые функции пользователям.
@@ -127,8 +131,11 @@ const MainPage = () => {
               времени.
             </li>
           </ul>
-          <p>Преимущества:</p>
-          <ul style={{ "list-style-type": "disc" }} className="text-left pl-32">
+          <p className="mt-8">Преимущества:</p>
+          <ul
+            style={{ "list-style-type": "disc" }}
+            className="text-left pl-6 sm:pl-8 lg:pl-12 mt-4 space-y-2"
+          >
             <li>
               Быстрое развертывание: GitOps позволяет минимизировать простои,
               обеспечивая стабильные и предсказуемые релизы.
