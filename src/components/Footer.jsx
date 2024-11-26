@@ -23,17 +23,17 @@ const Footer = () => {
       <div className="text-center md:text-left mb-4 md:mb-0 ">
         <p>© 2024 GitOps. Все права защищены.</p>
       </div>
-      <div className="text-center md:text-right flex items-center relative">
-        <p className="inline-flex items-center">
+      <div className="text-center md:text-right flex flex-col items-center relative md:items-start md:flex-row">
+        <p className="inline-flex items-center mb-2 md:mb-0">
           Разработали сайт: Белан Сергей, Дудник Максим, Котельников Тимофей,
           Ларин Артем
         </p>
-        <div className="relative">
+        <div className="relative mt-2 md:mt-0 md:ml-2">
           <button
             onClick={toggleDropdown}
-            className="ml-2 text-blue-500 hover:text-blue-700 focus:outline-none relative"
+            className="text-blue-500 hover:text-blue-700 focus:outline-none"
           >
-            <FaTelegramPlane size={24} />
+            <FaTelegramPlane size={24} className="relative z-10" />
           </button>
           {isDropdownVisible && (
             <ul
