@@ -42,12 +42,20 @@ const MainPage = () => {
 
   return (
     <div className="h-auto min-h-screen bg-gray">
-      <section className="flex items-center text-center flex-col pt-10 px-4 sm:px-8">
-        <div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white animate-fadeIn2">
+      <section
+        className="relative h-96 sm:h-[500px] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${parallaxImage})`,
+          backgroundAttachment: "fixed"
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white animate-fadeIn2 px-4 sm:px-8">
             Добро пожаловать в GitOps
           </h1>
         </div>
+      </section>
+      <section className="flex items-center text-center flex-col pt-0 px-4 sm:px-8">
         <div className="mt-10">
           <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl p-4 sm:p-8 text-white animate-fadeIn2 max-w-4xl mx-auto">
             GitOps: Будущее DevOps — Автоматизация, Прозрачность и Надежность
@@ -56,33 +64,21 @@ const MainPage = () => {
             ускорьте процесс разработки с помощью GitOps — инновационного
             подхода, который меняет правила игры в DevOps.
           </p>
-          <section className="relative w-full my-10 px-4 sm:px-8 lg:px-16">
-            <div
-              style={{
-                backgroundImage: `url(${parallaxImage})`,
-                backgroundAttachment: "fixed",
-                backgroundSize: "cover",
-                backgroundPosition: "center"
-              }}
-              className="absolute inset-0 rounded-2xl opacity-40 border-solid border-black border-2"
-            ></div>
-            <p className="relative rounded-2xl p-6 sm:p-12 text-white max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl">
-              GitOps — это современная методология, которая предлагает
-              уникальный и более эффективный способ управления инфраструктурой и
-              приложениями. Этот подход основывается на использовании Git —
-              надежной системы контроля версий, знакомой всем разработчикам.
-              Благодаря GitOps, управление инфраструктурой превращается в
-              простую и предсказуемую задачу, где каждый этап автоматизирован и
-              прозрачен. Что такое GitOps? GitOps представляет собой новый
-              взгляд на DevOps, где каждое изменение проходит через систему Git
-              и автоматически развертывается в вашей инфраструктуре. Больше не
-              нужно полагаться на сложные и громоздкие процессы управления;
-              достаточно просто обновить Git-репозиторий, и система позаботится
-              обо всем остальном. Ваша инфраструктура становится кодом, который
-              можно контролировать, тестировать и проверять так же, как и любое
-              другое приложение.
-            </p>
-          </section>
+          <p className="p-6 sm:p-12 text-white max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl">
+            GitOps — это современная методология, которая предлагает уникальный
+            и более эффективный способ управления инфраструктурой и
+            приложениями. Этот подход основывается на использовании Git —
+            надежной системы контроля версий, знакомой всем разработчикам.
+            Благодаря GitOps, управление инфраструктурой превращается в простую
+            и предсказуемую задачу, где каждый этап автоматизирован и прозрачен.
+            Что такое GitOps? GitOps представляет собой новый взгляд на DevOps,
+            где каждое изменение проходит через систему Git и автоматически
+            развертывается в вашей инфраструктуре. Больше не нужно полагаться на
+            сложные и громоздкие процессы управления; достаточно просто обновить
+            Git-репозиторий, и система позаботится обо всем остальном. Ваша
+            инфраструктура становится кодом, который можно контролировать,
+            тестировать и проверять так же, как и любое другое приложение.
+          </p>
         </div>
       </section>
       <section className="flex items-center justify-center pb-0 pt-0 px-4 sm:px-8">
